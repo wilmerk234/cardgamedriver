@@ -139,6 +139,6 @@ public class LamarckianPoker {
 
     @Override
     public String toString() {
-        return "Player 1: " + player1Hand + "\nPlayer 2: " + player2Hand + "\nPool: " + pool;
+        return "\nPlayer 1: \n" + player1Hand + "\nPlayer 2: \n" + player2Hand + "\nPool: " + pool + "\n";
     }
 }

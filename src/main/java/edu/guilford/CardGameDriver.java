@@ -40,17 +40,15 @@ public class CardGameDriver {
 
         LamarckianPoker lmpGame = new LamarckianPoker();
         lmpGame.deal();
-
+        System.out.println("\nInitial Lamarckian hands\n" + lmpGame);
 
         boolean gameDone = false;
         while (!gameDone) {
         //    System.out.println(lmpGame);
             gameDone = !lmpGame.turn();
-    
         }
   
-        System.out.println(lmpGame);
-       
+        System.out.println("Final Lamarckian hands\n" + lmpGame);   
 
     }
 }
