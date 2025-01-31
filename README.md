@@ -74,7 +74,7 @@ A `Hand` object holds a sequence of `Card` objects that represent the cards a si
 
 ## Blackjack
 
-We will implement a simple version of player and dealer actions in the Blackjack game. 
+We will implement a simple version of player and dealer actions in the Blackjack game.
 
 Starting the game is when the player and dealer are each dealt two random cards. 
 
@@ -157,6 +157,8 @@ The `LamarckianPoker` class implements the start of a new game and the playing o
 The driver program is contained in the `CardGameDriver` program. This program performs tests on both the `Blackjack` and `LamarckianPoker` classes. In doing so, it implicitly tests all other classes.
 
 ### Blackjack testing
+
+This testing approach and the `Blackjack` and utility classes are based on [an approach](https://cs.colby.edu/courses/F17/cs231-labs/proj01.php) described by Caitrin Eaton for a Data Structures & Algorithms project at Colby College 
 
 The driver program runs 10000 games of blackjack by instantiating a `Blackjack` object and then using its methods to deal cards, execute player and dealer turns, and evaluate the result. It records for each game whether the dealer wins, the player wins, or there is a tie (which is called a *push*). During the testing, when the deck has fewer than 10 cards, a new deck is used in the game. The number of dealer wins, player wins, and pushes is displayed.
 
