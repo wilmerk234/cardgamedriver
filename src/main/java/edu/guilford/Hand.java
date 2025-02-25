@@ -34,7 +34,6 @@ public class Hand {
     // Calculate the value of the hand
     public int getTotalValue() {
         int value = 0;
-        int aces = 0;
         for (Card card : hand) {
             switch (card.getRank()) {
                 case TWO:
@@ -68,18 +67,11 @@ public class Hand {
                     value += 10;
                     break;
                 case ACE:
-                    aces++;
+                    value += 11; // Count Ace as 11 for Thirty-One
                     break;
             }
         }
-        for (int i = 0; i < aces; i++) {
-            if (value + 11 <= 21) {
-                value += 11;
-            } else {
-                value += 1;
-            }
-        }
-        return value;
+        return value; // Return the total value without Ace adjustment
     }
 
     // Override toString method
